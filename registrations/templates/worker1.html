@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Workers Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">-->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+    	@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+    	body {
+  			background-color: #FBB03b;
+  			/*background-image: linear-gradient(45deg,#F0F8FF,#FFF0F5);*/
+    	}
+    	.material-icons {
+    		color:#FF8C00;
+    	}
+    	#form_body{
+    		background-color:white;
+    		width:800px;
+    		margin-top:100px;
+    		border-radius:5%;
+    	}
+    	#btn-prop{
+    		margin-left:30px;
+    	}
+    	#btn-prop:hover{
+    		color:#FBB03b;
+    		background-color:white;
+    	}
+        .row{
+    		margin:2px;
+    		padding:1px;
+    	}
+    </style>
+</head>
+
+<body>
+<div class="container" id="form_body">
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3><center>Register</center></h3>
+			<div class="col-md-8">
+				{% if messages %}
+				  {% for message in messages %}
+					<div class="alert alert-{{ message.tags }}">
+					  {{ message }}
+					</div>
+				  {% endfor %}
+				{% endif %}
+			   
+			  </div>
+            <p><center>Please enter your credentials to register</center></p>
+          </div>
+        </div>
+  <div class="row">
+    
+    <form class="col s12" action="" method="POST">
+
+        {% csrf_token %}
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text"name="Name" class="validate" required>
+          <label for="icon_prefix"> Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" name="Phone_Number" class="validate" required>
+          <label for="icon_telephone">Telephone</label>
+        </div>
+      </div>
+
+
+ 	</div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="icon_email" type="email" name="Email" class="validate" >
+          <label for="icon_email"> E-Mail Id</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons prefix">address</i>
+          <textarea id="textarea1"  name="Address_line1"class="materialize-textarea"></textarea>
+          <label for="textarea1">Address</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">home</i>
+          <input id="icon_designation" type="text" name="State" class="validate" required>
+          <label for="icon_designation"> State </label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">home</i>
+          <input id="icon_website" type="text" name="City" class="validate" required>
+          <label for="icon_website">City</label>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="input-field col s12">
+      		<p> Skills/ Categories</p>
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories0" value="contruction"  />
+        			<span>Construction</span>
+      			</label>
+    		</p> 
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories1" value="Mining"   />
+        			<span>Mining</span>
+      			</label>
+    		</p> 
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories2" value="Manufacturing" />
+        			<span>Manufacturing</span>
+      			</label>
+    		</p>
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories3" value="Agriculture" />
+        			<span>Agriculture</span>
+      			</label>
+    		</p> 
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories4" value= "Handy Man"/>
+        			<span>Handy Man</span>
+      			</label>
+    		</p> 
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories5" value= "Transport"  />
+        			<span>Transport</span>
+      			</label>
+    		</p> 
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories6" value= "Textile"  />
+        			<span>Textile</span>
+      			</label>
+    		</p>
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name="Categories7" value= "other"  />
+        			<span>Other:</span>
+        			<input id="interminate-text" type="text" name="other_job"  />
+
+      			</label>
+    		</p>        		
+      	</div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+ 	<p> Highest Education ?</p>
+         <p>
+      <label>
+        <input name='Education_Level' type="radio" value="na"/>
+        <span>NA:None</span>
+      </label>
+    	</p>
+         <p>
+      <label>
+        <input name='Education_Level' type="radio" value="8" />
+        <span>PE: Till 8th </span>
+      </label>
+    	</p>
+         <p>
+      <label>
+        <input name='Education_Level' type="radio" value="10"/>
+        <span>SE: Till 10th</span>
+      </label>
+    	</p>
+    <p>
+      <label>
+        <input name='Education_Level' type="radio" value="12"/>
+        <span>SS: Till 12th</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name='Education_Level' type="radio" value="GR" />
+        <span>GR: Graduation</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name='Education_Level' type="radio" value="PG" />
+        <span>PG: Post Graduation</span>
+      </label>
+    </p>
+    </div>
+    </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">money</i>
+          <input id="icon_salary" type="text" name="Minimum_Expected_Salary"class="validate" required>
+          <label for="icon_salary"> Minimum expected salary(in rupees)</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">calender</i>
+          <input id="icon_date" type="date"name='Date_of_Birth' class="validate" required>
+          <label for="icon_date"> DoB</label>
+        </div>
+    </div>
+
+      <div class="row">
+      	<div class="input-field col s12">
+      		<p>Preferred Work location</p>
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name='Preferred_Work_Location1' value="SC: Same City"/>
+        			<span>SC: Same City</span>
+      			</label>
+    		</p> 
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name='Preferred_Work_Location2' value="SS: Same State" />
+        			<span>SS: Same State</span>
+      			</label>
+    		</p> 
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox"name='Preferred_Work_Location3' value="TC: Tier-1 cities (Delhi,Mumbai etc.)"  />
+        			<span>TC: Tier-1 cities (Delhi,Mumbai etc.)</span>
+      			</label>
+    		</p>
+    		<p>
+      			<label>
+        			<input id="indeterminate-checkbox" type="checkbox" name='Preferred_Work_Location4' value="All over India" />
+        			<span>All over India</span>
+      			</label>
+    		</p>       		
+      	</div>
+      </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">work</i>
+          <input id="icon_exp" type="text"name='Previous_Work_Experience' class="validate" required>
+          <label for="icon_exp"> Previous Work Experience</label>
+        </div>
+    </div>
+
+
+	  <div class="row" >
+	  	<div class="input-field col s12" >
+         <p>
+         	<i class="material-icons prefix">arrow_forward</i>
+      		<label>
+        		<input id="indeterminate-checkbox" type="checkbox" name="conditions"/>
+        			<span>Accept terms & conditions</span>
+      		</label>
+    	</p>
+    </div>
+	  </div>
+	  <div class="row">
+	  <div class="input-field col s12">
+      <button class="btn waves-effect waves-light" id="btn-prop" type="submit" name="action">Submit
+   		<i class="material-icons right">send</i>
+  	  </button>
+  	</div>
+  	</div>
+</form>
+{{form.errors}}
+
+{{ form.non_field_errors }}
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
