@@ -1,0 +1,878 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8" />
+    <title>MiBi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="MobileOptimized" content="320" />
+    <!--Template style -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/flaticon.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/dropify.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery-ui.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/magnific-popup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/nice-select.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/responsive.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/custom.css' %}">
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="{% static '/img/Logo-small.png' %}" />
+</head>
+
+<body>
+    <!-- preloader Start -->
+    <!-- preloader Start -->
+    <div class="jb_preloader">
+        <div class="spinner_wrap">
+            <div class="spinner"></div>
+        </div>
+        <!-- <img src='img/loader.gif' /> -->
+    </div>
+    <div class="cursor cursor2 cursor3"></div>
+    <!-- Top Scroll Start --><a href="javascript:" id="return-to-top" class="return_top3"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Top Scroll End -->
+    <!-- cp navi wrapper Start -->
+    <nav class="cd-dropdown cd_dropdown_index2 cd_dropdown_index3 d-block d-sm-block d-md-block d-lg-none d-xl-none">
+        <h2><a href="https://mibiservice.com/"> <span><img src="{% static '/img/Logo.png' %}" alt="img"></span></a></h2>
+
+        <a href="#0" class="cd-close">Close</a>
+        <ul class="cd-dropdown-content">
+            <li class="">
+                <a href="{% url 'index' %}">home</a>
+            </li>
+            <li class="">
+                <a href="{% url 'partners' %}">our partners</a>
+            </li>
+            <!-- <li class="">
+                <a href="#">blog</a>
+            </li> -->
+            <li><a href="{% url 'pricing' %}">Pricing</a></li>
+            <li><a href="{% url 'about_us' %}">about</a></li>
+            <li><a href="{% url 'contact_us' %}">contact us</a></li>
+        </ul>
+    </nav>
+    <div class="cp_navi_main_wrapper index_2_top_header index_3_top_header jb_cover">
+
+        <div class="cp_logo_wrapper index_2_logo index_3_logo">
+            <a href="https://mibiservice.com/">
+                <img src="{% static '/img/Logo.png' %}" alt="logo" style="height:50px;">
+            </a>
+        </div>
+        <header class="mobail_menu d-block d-sm-block d-md-block d-lg-none d-xl-none">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cd-dropdown-wrapper">
+                            <a class="house_toggle" href="#0">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177" style="enable-background:new 0 0 31.177 31.177;" xml:space="preserve" width="25px" height="25px">
+                                    <g>
+                                        <g>
+                                            <path class="menubar" d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z" fill="#004165" />
+                                        </g>
+                                        <g>
+                                            <path class="menubar" d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z" fill="#004165" />
+                                        </g>
+                                        <g>
+                                            <path class="menubar" d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z" fill="#004165" />
+                                        </g>
+                                        <g>
+                                            <path class="menubar" d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z" fill="#004165" />
+                                        </g>
+                                        <g>
+                                            <path class="menubar" d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z" fill="#004165" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="jb_navigation_wrapper index_2_right_menu index_3_right_menu">
+            <div class="posting_job">
+                <ul>
+                    <li class="btn_hover">
+                         <a href="#forms_parts" >Join now</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mainmenu green_main_menu blue_main_menu d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                <ul class="main_nav_ul menu_2_ul">
+                    <li><a href="{% url 'index' %}" class="gc_main_navigation active_class active_class2 active_class3">home</a>
+                    </li>
+                    <li><a href="{% url 'partners' %}" class="gc_main_navigation">our partners</a>
+                    </li>
+                              <!-- <li><a href="#" class="gc_main_navigation">blog </a>
+                    </li> -->
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                              <li><a href="{% url 'about_us' %}" class="gc_main_navigation">about</a>
+                    </li>
+                   <li><a href="{% url 'contact_us' %}" class="gc_main_navigation">contact us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+       
+      </div>
+    <div class="main_slider_wrapper slider-area jb_cover">
+        <div class="mains_slider_shaper">
+            <img src="{% static '/images/slider_bg.png' %}" class="img-responsive" alt="img">
+        </div>
+        <div class="slider_small2_shape">
+            <img src="{% static '/images/shape4.png' %}" class="img-responsive " alt="img">
+        </div>
+        <div class="slider_shape_smt bubble-1">
+            <img src="{% static '/images/bubble.png' %}" class="img-responsive " alt="img">
+        </div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="carousel-captions caption-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="content">
+                                        <div class="slider_shape_smt1 bubble-2">
+                                            <img src="{% static '/images/bubble.png' %}" class="img-responsive " alt="img">
+                                        </div>
+                                        <h2 data-animation="animated fadeInUp"><span>MiBi</span>: Get a Job or Hire Workers Easily</h2>
+
+                                        <p data-animation="animated fadeInUp">An initiative to organise the unorganised</p>
+                                        <div data-animation="animated fadeInUp" class="btn_hover slider_btn">
+                                            <a href="#forms_parts">sign up for free</a>
+                                            <!--<a href="https://play.google.com/store/apps/details?id=com.mibiservice.app" target="_blank">sign up free</a>-->
+                                        </div>
+                                        <!-- <div data-animation="animated fadeInUp" class="slider_icon_list">
+                                            <ul>
+
+                                                <li><a href="#"><i class="fab fa-apple"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fab fa-amazon"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fab fa-angular"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fas fa-th-large"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fas fa-blog"></i></a>
+                                                </li>
+
+                                            </ul>
+                                        </div> -->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="slider_shape_sm3 bubble-3">
+                                        <img src="{% static '/images/bubble.png' %}" class="img-responsive " alt="img">
+                                    </div>
+                                    <div class="slider_side_img jb_cover">
+                                        <img src="{% static '/images/slider_img.png' %}" class="img-responsive" alt="img">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="carousel-item">
+                    <div class="carousel-captions caption-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="content">
+                                        <div class="slider_shape_smt1 bubble-4">
+                                            <img src="images/bubble.png" class="img-responsive" alt="img">
+                                        </div>
+                                        <h2 data-animation="animated fadeInUp">Lorem Ipsum <span> 100 </span>exercitation ullamco laboris 2.</h2>
+
+                                        <p data-animation="animated fadeInUp">voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident officia</p>
+                                        <div data-animation="animated fadeInUp" class="btn_hover slider_btn">
+                                            <a href="#">sign up free</a>
+                                        </div>
+                                        <div data-animation="animated fadeInUp" class="slider_icon_list">
+                                            <ul>
+
+                                                <li><a href="#"><i class="fab fa-apple"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fab fa-amazon"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fab fa-angular"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fas fa-th-large"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fas fa-blog"></i></a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="slider_shape_sm3 bubble-5">
+                                        <img src="images/bubble.png" class="img-responsive" alt="img">
+                                    </div>
+                                    <div class="slider_side_img jb_cover">
+                                        <img src="images/slider_img.png" class="img-responsive" alt="img">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="carousel-item">
+                    <div class="carousel-captions caption-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="content">
+                                        <div class="slider_shape_smt1 bubble-6">
+                                            <img src="images/bubble.png" class="img-responsive" alt="img">
+                                        </div>
+                                        <h2 data-animation="animated fadeInUp">Lorem Ipsum <span> 100 </span>exercitation ullamco laboris 3.</h2>
+
+                                        <p data-animation="animated fadeInUp">voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident officia</p>
+                                        <div data-animation="animated fadeInUp" class="btn_hover slider_btn">
+                                            <a href="#">sign up free</a>
+                                        </div>
+                                        <div data-animation="animated fadeInUp" class="slider_icon_list">
+                                            <ul>
+
+                                                <li><a href="#"><i class="fab fa-apple"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fab fa-amazon"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fab fa-angular"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fas fa-th-large"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fas fa-blog"></i></a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="slider_shape_sm3 bubble-7">
+                                        <img src="images/bubble.png" class="img-responsive" alt="img">
+                                    </div>
+                                    <div class="slider_side_img jb_cover">
+                                        <img src="images/slider_img.png" class="img-responsive" alt="img">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class="">
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class="">
+                    </li>
+                </ol>
+                <div class="carousel-nevigation">
+                    <a class="prev" href="#carousel-example-generic" role="button" data-slide="prev"><i class="flaticon-left-arrow"></i>
+                    </a>
+                    <a class="next" href="#carousel-example-generic" role="button" data-slide="next"><i class="flaticon-right-arrow"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+        <div class="slider_small_shape">
+            <img src="{% static '/images/shape4.png' %}" class="img-responsive" alt="img">
+        </div>
+    </div>
+    <!-- slider wrapper End -->
+
+    <!-- <section class="alignwide wp-block-ugb-icon ugb-icon ugb-629ae69 ugb-icon--v2 ugb-icon--design-basic ugb-main-block">
+      <div class="ugb-inner-block">
+        <div class="ugb-block-content">
+          <h1>Our Top Features</h1>
+          <div class="ugb-icon__content-wrapper">
+
+            <div class="ugb-icon_item ugb-icon_item1">
+              <div class="ugb-icon__icon">
+                <div class="ugb-icon_design-wrapper ugb-icon_design-outlined">
+                  <div class="ugb-icon-inner-svg">
+                    <svg data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+                  </div>
+                </div>
+              </div>
+              <h5 class="ugb-icon__title">Job Seeker</h5>
+            </div>
+
+            <div class="ugb-icon_item ugb-icon_item2">
+              <div class="ugb-icon__icon">
+                <div class="ugb-icon_design-wrapper ugb-icon_design-outlined">
+                  <div class="ugb-icon-inner-svg">
+                    <svg data-prefix="fas" data-icon="cogs" class="svg-inline--fa fa-cogs fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z">
+                    </path></svg>
+                  </div>
+                </div>
+              </div>
+              <h5 class="ugb-icon__title">Top Jobs</h5>
+            </div>
+
+            <div class="ugb-icon_item ugb-icon_item3">
+              <div class="ugb-icon__icon">
+                <div class="ugb-icon_design-wrapper ugb-icon_design-outlined">
+                  <div class="ugb-icon-inner-svg">
+                    <svg data-prefix="fas" data-icon="cubes" class="svg-inline--fa fa-cubes fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z">
+                    </path></svg>
+                  </div>
+                </div>
+              </div>
+              <h5 class="ugb-icon__title">Top Categories</h5>
+            </div>
+
+            <div class="ugb-icon_item ugb-icon_item4">
+              <div class="ugb-icon__icon">
+                <div class="ugb-icon_design-wrapper ugb-icon_design-outlined">
+                  <div class="ugb-icon-inner-svg">
+                    <svg data-prefix="fas" data-icon="money-check-alt" class="svg-inline--fa fa-money-check-alt fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M608 32H32C14.33 32 0 46.33 0 64v384c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zM176 327.88V344c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-16.29c-11.29-.58-22.27-4.52-31.37-11.35-3.9-2.93-4.1-8.77-.57-12.14l11.75-11.21c2.77-2.64 6.89-2.76 10.13-.73 3.87 2.42 8.26 3.72 12.82 3.72h28.11c6.5 0 11.8-5.92 11.8-13.19 0-5.95-3.61-11.19-8.77-12.73l-45-13.5c-18.59-5.58-31.58-23.42-31.58-43.39 0-24.52 19.05-44.44 42.67-45.07V152c0-4.42 3.58-8 8-8h16c4.42 0 8 3.58 8 8v16.29c11.29.58 22.27 4.51 31.37 11.35 3.9 2.93 4.1 8.77.57 12.14l-11.75 11.21c-2.77 2.64-6.89 2.76-10.13.73-3.87-2.43-8.26-3.72-12.82-3.72h-28.11c-6.5 0-11.8 5.92-11.8 13.19 0 5.95 3.61 11.19 8.77 12.73l45 13.5c18.59 5.58 31.58 23.42 31.58 43.39 0 24.53-19.05 44.44-42.67 45.07zM416 312c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16zm160 0c0 4.42-3.58 8-8 8h-80c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16zm0-96c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h272c4.42 0 8 3.58 8 8v16z">
+                    </path></svg>
+                  </div>
+                </div>
+              </div>
+              <h5 class="ugb-icon__title">High Pay</h5>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section-full sf-overlay-wrapper text-center mb-5" style="background-image:url();background-attachment: scroll">
+            <div class="container">
+
+                <div class="section-head w-t-element">
+                    <h2 style="color:#FBB03B">Why To Choose Us</h2>
+                    <div class="after-titile-line" style="background-image:url(http://mibiservice.com/wp-content/uploads/2020/09/icons8-bee-48.png)"><span class="title-line-left" style="background-color:#A7A7A7"></span><span class="title-line-right" style="background:#A7A7A7"></span></div>
+                    <div class="sf-tagile-outer" style="color:#FFFFFF"><p>First And Final We Are The Best</p></div>
+                </div>
+
+                <div class="section-content">
+                    <div class="row"><div class="col-md-4 col-sm-12 my-4">
+                              <div class="sf-why-choose w-t-element padding-lr-20">
+                                    <div class="sf-icon-xl margin-b-20">
+                                        <img src="http://mibiservice.com/wp-content/uploads/2020/08/icons8-helping-hand-96.png" width="220" height="200" alt="">
+                                    </div>
+                                    <h4 class="sf-tilte margin-b-10">Get Work</h4>
+                                    <p></p>
+
+                              </div>
+                            </div><div class="col-md-4 col-sm-12 my-4">
+                              <div class="sf-why-choose w-t-element padding-lr-20">
+                                    <div class="sf-icon-xl margin-b-20">
+                                        <img src="http://mibiservice.com/wp-content/uploads/2020/08/icons8-graph-report-96.png" width="220" height="200" alt="">
+                                    </div>
+                                    <h4 class="sf-tilte margin-b-10">Grow Your Income </h4>
+                                    <p></p>
+
+                              </div>
+                            </div><div class="col-md-4 col-sm-12 my-4">
+                              <div class="sf-why-choose w-t-element padding-lr-20">
+                                    <div class="sf-icon-xl margin-b-20">
+                                        <img src="http://mibiservice.com/wp-content/uploads/2020/09/icons8-old-woman-64.png" width="220" height="200" alt="">
+                                    </div>
+                                    <h4 class="sf-tilte margin-b-10">Financial Inclusion</h4>
+                                    <p></p>
+
+                              </div>
+                            </div></div>
+                </div>
+            </div>
+            <div class="sf-overlay-main" style="opacity:1.0; background-color:#262626">
+        </section>
+
+    <div class="counter_wrapper jb_cover mb-5">
+        <div class="counter_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="counter_mockup_design jb_cover">
+                        <div class="animation-circle-inverse"><i></i><i></i><i></i></div>
+                        <img src="{% static '/images/mockup2.png' %}" class="img-responsive" alt="img">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="counter_right_wrapper jb_cover">
+                        <h1>Some Statistical Facts</h1>
+                        <div class="counter_width">
+                            <div class="counter_cntnt_box">
+
+                                <div class="count-description"><span class="timer">1000</span>+
+                                    <p class="con2">workers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="counter_width">
+                            <div class="counter_cntnt_box">
+
+                                <div class="count-description"> <span class="timer">20</span>+
+                                    <p class="con2">recruiters</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="counter_width">
+                            <div class="counter_cntnt_box">
+
+                                <div class="count-description"> <span class="timer">10</span><span>+</span>
+                                    <p class="con2">categories</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <section class="how_mibi_works pb-5">
+    <h2 class="">How MiBi Service Works<br></h2>
+
+    <div class="works__container">
+      <div class="works__inner-container">
+        <p class="ugb-block-description my-5">For Job Seeker</p>
+        <div class="ugb-block-content">
+          <ul class="pb-2">
+            <li class="mx-3"><i class="far fa-check-circle"></i> Register</li>
+            <li class="mx-3"><i class="far fa-check-circle"></i> Skill Mapping</li>
+            <li class="mx-3"><i class="far fa-check-circle"></i> Listed</li>
+            <li class="mx-3"><i class="far fa-check-circle"></i> Hired</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+<div class="works__container">
+  <div class="works__inner-container">
+    <p class="ugb-block-description my-5 pt-3">For Recruiter</p>
+    <div class="ugb-block-content">
+      <ul>
+        <li class="mx-3"><i class="far fa-check-circle"></i> Register</li>
+        <li class="mx-3"><i class="far fa-check-circle"></i> Post Job</li>
+        <li class="mx-3"><i class="far fa-check-circle"></i> Find Best</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+    <div class="download_wrapper jb_cover mb-5">
+      <div class="counter_overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="download_mockup_design jb_cover">
+              <div class="animation-circle-inverse2"><i></i><i></i><i></i></div>
+              <img src="{% static '/images/mockup5.png' %}" class="img-responsive" alt="img" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="download_app_store jb_cover">
+              <h1>Download</h1>
+              <h2>MiBi App Now!</h2>
+              <p>
+                All it takes is 30 seconds to Download.
+                <br />
+                Fast, Simple & Delightful.
+              </p>
+              <div class="app_btn jb_cover">
+                <a href="https://play.google.com/store/apps/details?id=com.mibiservice.app" target="_blank" class="ss_playstore"
+                  ><span><i class="flaticon-android-logo"></i></span> Play
+                  Store</a
+                >
+                <!-- <a href="#" class="ss_appstore"
+                  ><span><i class="flaticon-apple"></i></span> App Store</a
+                > -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="download_wrapper index3_download jb_cover mb-5">
+        <div class="line_shape">
+            <img src="images/line.png" class="img-responsive" alt="img">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="download_mockup_design jb_cover">
+
+                        <img src="images/mockup7.png" class="img-responsive" alt="img">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="download_app_store jb_cover">
+                        <h1>Download</h1>
+                        <h2>Job Portal App Now!</h2>
+                        <p>All it takes is 30 seconds to Download. Your Mobile App for Job
+                            <br> Fast, Simple & Delightful.</p>
+                        <div class="app_btn playstore_2 jb_cover">
+                            <a href="#" class="ss_playstore"><span><i class="flaticon-android-logo"></i></span> Play Store</a>
+                            <a href="#" class="ss_appstore"><span><i class="flaticon-apple"></i></span> App Store</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="client_wrapper_top jb_cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
+                    <div class="jb_heading_wraper">
+
+                        <h3>our happy clients
+</h3>
+
+                        <p>Your next level Product developemnt company assets</p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="client_wrapper jb_cover">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="client_wrapper_cntnt jb_cover">
+                                            <div class="client_shap1 bubble-5">
+                                                <img src="images/bubble.png" class="img-responsive" alt="img">
+                                            </div>
+                                            <div class="client_shap2 bubble-7">
+                                                <img src="images/bubble.png" class="img-responsive" alt="img">
+                                            </div>
+                                            <img src="images/quote1.png" alt="img">
+
+                                            <h1><a href="#">Marita Irene</a> <span>(business)</span></h1>
+
+                                            <p>Packages and web page editors now use Lorem Ipsum as their am efault model text yr,and a search.</p>
+                                            <div class="client_shap3 bubble-6">
+                                                <img src="images/bubble.png" class="img-responsive" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="clinnt_slider_img jb_cover">
+                                            <img src="images/vv.png" class="img-responsive" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="client_wrapper_cntnt jb_cover">
+                                            <div class="client_shap1 bubble-8">
+                                                <img src="images/bubble.png" class="img-responsive" alt="img">
+                                            </div>
+                                            <div class="client_shap2 bubble-9">
+                                                <img src="images/bubble.png" class="img-responsive" alt="img">
+                                            </div>
+                                            <img src="images/quote1.png" alt="img">
+
+                                            <h1><a href="#">Marita Irene</a> <span>(business)</span></h1>
+
+                                            <p>Packages and web page editors now use Lorem Ipsum as their am efault model text yr,and a search.</p>
+                                            <div class="client_shap3 bubble-6">
+                                                <img src="images/bubble.png" class="img-responsive" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="clinnt_slider_img jb_cover">
+                                            <img src="images/vv.png" class="img-responsive" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider_small3_shape shapenew">
+            <img src="images/shape4.png" class="img-responsive" alt="img">
+        </div>
+    </div> -->
+
+    <div class="popular_wrapper jb_cover" id="forms_parts">
+        <div class="slider_small3_shape shapenew">
+            <img src="{% static '/images/shape4.png' %}" class="img-responsive " alt="img">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
+                    <div class="jb_heading_wraper">
+
+                        <h3>We are Popular Everywhere
+</h3>
+
+                        <p>For a recruiter or a worker</p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="jp_register_section_main_wrapper jb_cover">
+                        <div class="jp_regis_left_side_box_wrapper">
+                            <div class="jp_regis_left_side_box">
+                                <i class="flaticon-laptop"></i>
+                                <h4>I’m a recruiter</h4>
+                                <p>Post a job and hire as many workers as you want</p>
+                                <ul>
+                                    <!--https://play.google.com/store/apps/details?id=com.mibiservice.app-->
+                                    <li><a href="{% url 'reg_recruiter' %}"  class="price_btn regis_btn"> register as recruiter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="jp_regis_right_side_box_wrapper">
+
+                            <div class="jp_regis_right_side_box">
+                                <i class="flaticon-doctor"></i>
+                                <h4>I’m a worker</h4>
+                                <p>Get a nice-paying job quickly with proper documentation</p>
+                                <ul>
+                                    <li><a href="{% url 'reg_worker' %}"  class="price_btn regis_btn">register as worker</a></li>
+                                </ul>
+                            </div>
+                            <div class="jp_regis_center_tag_wrapper">
+                                <p>OR</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:35px;">
+                    <div class="jp_register_section_main_wrapper jb_cover">
+                    <!--    <div class="jp_regis_left_side_box_wrapper">-->
+                           <center> <div class="jp_regis_left_side_box" style="text-align: center;">
+                                <i class="flaticon-doctor" style="height:5px"></i>
+                                <h4 style="margin-left:10px; text-align:center;">I’m a partner</h4>
+                                <p>Support Us and be our partner</p>
+                                <ul>
+                                    <!--https://play.google.com/store/apps/details?id=com.mibiservice.app-->
+                                  <center>  <li><a href="{% url 'reg_partner' %}"  class="price_btn regis_btn"> register as partner</a></li></center>
+                                </ul>
+                            </div></center>
+                        </div>
+            </div>
+        </div>
+  
+
+    <!-- <div class="news_letter_wrapper shaa jb_cover">
+        <div class="sha1 bubble-180">
+            <img src="images/bubble2.png" class="img-responsive " alt="img">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="job_newsletter_wrapper jb_cover">
+                        <div class="jb_newslwtteter_left">
+                            <h2> Looking For A Job</h2>
+                            <p>Your next level Product developemnt company assetsYour next level Product </p>
+                        </div>
+                        <div class="jb_newslwtteter_button">
+                            <div class="btn_hover slider_btn jobs_btn_3">
+                                <a href="#">submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sha2 bubble-185">
+            <img src="images/bubble2.png" class="img-responsive " alt="img">
+        </div>
+    </div> -->
+
+    <div class="footer index2_footer_wrapper footer_index3 shaa jb_cover">
+        <div class="ft_shape bubble-18">
+            <img src="{% static '/images/bubble2.png' %}" class="img-responsive " alt="img">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="footerNav jb_cover">
+                        <!-- <a href="#"><img src="images/logo5.png" alt="img"></a> -->
+                        <a href="https://mibiservice.com/"><img src="{% static '/img/Logo.png' %}" alt="img" style="height:80px; filter:hue-rotate(0)"></a>
+                        <ul class="footer_first_contact">
+                            <li><i class="flaticon-location-pointer"></i>
+                                <p>1. Incubation Center IIT Indore, Simrol, Indore, Madhya Pradesh 452020.
+                                    <br>2. Ward no. 3, Via-khuri, Sikar, Rajasthan 332315
+                                </p>
+                            </li>
+                            <li><i class="flaticon-telephone"></i>
+                                <p>+916265700389
+                                    <!-- <br> 1 -234 -456 -7890 -->
+                                  </p>
+                            </li>
+                            <li><i class="flaticon-envelope"></i><a href="#">support@mibiservice.com </a>
+                                <!-- <br> -->
+                                <!-- <a href="#">support@mibiservice.com</a> -->
+                            </li>
+
+                        </ul>
+
+                        <ul class="icon_list_news index2_icon_list jb_cover">
+                            <li>
+                              <a href="https://www.facebook.com/mibi.india"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/mibi_india"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                              <a href="https://www.linkedin.com/company/mibi-services-pvt-ltd/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/mibi_india/"><i class="fab fa-instagram"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="footerNav jb_cover footer_border_displ">
+                        <h5>app & integration</h5>
+                        <ul class="nav-widget">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="partners.html">Our Partners</a>
+                            </li>
+
+                            <!-- <li>
+                                <a href="#">Blog</a>
+                            </li> -->
+                            <li>
+                                <a href="about_us.html">About</a>
+                            </li>
+                            <li>
+                                <a href="contact_us.html">Cotact Us</a>
+                            </li>
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.mibiservice.app" target="_blank">Download App</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-12 mt-sm-5">
+                    <div class="footerNav jb_cover footer_border_displ">
+                        <h5>About MiBi</h5>
+
+                        <p class="footer__text">
+                            We serve the unorganized sector workforce by upskilling, hiring, and personalized financial literacy and management solutions like saving, investing, etc., through a seamless AI-powered platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="copyright_left"><i class="fa fa-copyright"></i> 2021 MiBi Sevices | All Rights Reserved.
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+        <div class="waveWrapper waveAnimation">
+            <div class="waveWrapperInner bgTop gradient-color">
+                <div class="wave waveTop wavetop_1 wavetop_3"></div>
+            </div>
+            <div class="waveWrapperInner bgMiddle">
+                <div class="wave waveMiddle"></div>
+            </div>
+            <div class="waveWrapperInner bgBottom">
+                <div class="wave waveBottom wavebottom_1 wavebottom_3"></div>
+            </div>
+        </div>
+        <div class="ft_shape2 bubble-190">
+            <img src="{% static '/images/bubble2.png' %}" class="img-responsive " alt="img">
+        </div>
+        <div class="ft_shape1 bubble-19">
+            <img src="{% static '/images/bubble2.png' %}" class="img-responsive " alt="img">
+        </div>
+    </div>
+
+    <!-- footer Wrapper End -->
+    <!-- chat box Wrapper start -->
+    <!-- <div id="chat-circle" class="btn btn-raised circle_index3">
+    <i class="fas fa-comment-alt"></i>
+    </div>
+    <div class="chat-box chat_box_3">
+    <div class="chat-box-header">
+      ChatBot
+      <span class="chat-box-toggle"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="chat-box-body chat_msg_box22">
+      <div class="chat-box-overlay">
+      </div>
+      <div class="chat-logs">
+
+      </div>
+    </div>
+    <div class="chat-input">
+      <form>
+        <input type="text" id="chat-input" placeholder="Send a message..."/>
+      <button type="submit" class="chat-submit" id="chat-submit"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+    </div> -->
+    <!-- chat box Wrapper end -->
+    <!--custom js files-->
+    <script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/modernizr.js' %}"></script>
+    <script src="{% static '/js/jquery.menu-aim.js' %}"></script>
+    <script src="{% static '/js/plugin.js' %}"></script>
+    <script src="{% static '/js/owl.carousel.js' %}"></script>
+    <script src="{% static '/js/jquery-ui.js' %}"></script>
+    <script src="{% static '/js/jquery.countTo.js' %}"></script>
+    <script src="{% static '/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static '/js/dropify.min.js' %}"></script>
+    <script src="{% static '/js/jquery.inview.min.js' %}"></script>
+    <script src="{% static '/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static '/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static '/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/js/custom.js' %}"></script>
+    <!-- custom js-->
+    </body>
+
+
+    </html>

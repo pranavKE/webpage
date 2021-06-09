@@ -6,6 +6,21 @@ from .models import *
 from django.contrib import messages
 # Create your views here.
 
+def pricing(request):
+    return render(request, 'price.html')
+
+def about_us(request):
+    return render(request, 'about_us.html')
+
+def contact_us(request):
+    return render(request, 'contact_us.html')
+
+def partners(request):
+    return render(request, 'partners.html')
+
+def index(request):
+    return render(request, 'index.html')
+
 def register_recruiter(request):
     form = RecruiterForm()
     context = {'form':form}
@@ -20,6 +35,7 @@ def register_recruiter(request):
                 if form.is_valid():
                     user = form.save()
                     messages.success(request, f'Your account has been created! You are now able to log in')
+                    return redirect('index')
             else:
                 messages.success(request, f'Email already exists')
         else:
@@ -53,18 +69,13 @@ def register_partner(request):
                 user=Partner.objects.create(name=name ,gender=gender,phone_number=phone_number,email=email,adress_line1=adress_line1,state=state,city=city,Do_you_have=Do_you_have)
                 user.save()     
                 messages.success(request, f'Your account has been created! You are now able to log in')
+                return redirect('index')
             else:
                 messages.success(request, f'invalid credentials')  
         else:          
             messages.success(request, f'Please accept the terms and conditions')
             
     return render(request, 'partner1.html', context)
-
-
-
-
-def home(request):
-    return render(request, 'home.html')
 
 def register_worker(request):
     if request.method == 'POST':
@@ -124,7 +135,7 @@ def register_worker(request):
                 print('Preferred_Work_Location_list=',Preferred_Work_Location_list)
                 NewWorker = Worker_model.objects.create(Name = Name, Phone_Number = Phone_Number, Email = Email, Address_line1 = Address_line1, State = State, City = City,Categories=cat_list, Education_Level = edu_level, Minimum_Expected_Salary = Minimum_Expected_Salary, Date_of_Birth = Date_of_Birth,Preferred_Work_Location=work_loc, Previous_Work_Experience = Previous_Work_Experience)
                 NewWorker.save()
-                return redirect('home')
+                return redirect('index')
             else:
                 messages.success(request, f'Please accept the terms and conditions')
 

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MiBi</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static '/css/pricing-plan.css' %}">
+  <link rel="icon" href="logo-small.png">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h5 class="text-center pricing-table-subtitle">PRICING PLAN</h5>
+      <h1 class="text-center pricing-table-title">Pricing Table</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-plan-basic">
+            <div class="card-body">
+
+              <span class="iconify pricing-plan-icon" data-icon="carbon:partnership" data-inline="false"></span>
+              <p class="pricing-plan-title">Partners</p>
+              <h3 class="pricing-plan-cost ml-auto">FREE</h3>
+              <ul class="pricing-plan-features">
+                <li>(for Partners)</li>
+                <li>Get associated</li>
+                <li>Earn up to 10k-20k commission</li>
+
+
+              </ul>
+              <a href="#!" class="btn pricing-plan-purchase-btn">Free</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
+            <div class="card-body">
+
+
+            <span class="iconify pricing-plan-icon" data-icon="mdi-account-hard-hat" data-inline="false"></span>
+
+              <p class="pricing-plan-title">Workers</p>
+              <h3 class="pricing-plan-cost ml-auto"> ₹ 12</h3>
+              <ul class="pricing-plan-features">
+                <li>Get listed for a year</li>
+                <li>Avail Basic/introductory courses for 1 year</li>
+                <li>Financial services</li>
+
+              </ul>
+              <a href="#!" class="btn pricing-plan-purchase-btn">Purchase</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-plan-enterprise">
+            <div class="card-body">
+
+              <span class="iconify pricing-plan-icon" data-icon="clarity:employee-solid" data-inline="false"></span>
+              <p class="pricing-plan-title">Recruiters</p>
+              <h3 class="pricing-plan-S ml-auto">5% of workers salary</h3>
+              <ul class="pricing-plan-features">
+                <li>5% of the worker's Salary</li>
+                <li>On demand skilled workers</li>
+                <li>Management Services</li>
+
+              </ul>
+              <a href="#!" class="btn pricing-plan-purchase-btn">Purchase</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
