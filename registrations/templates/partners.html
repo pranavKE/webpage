@@ -63,7 +63,8 @@
         <!-- <li class="">
           <a href="#">blog</a>
         </li> -->
-        <li><a href="{% url 'about_us' %}">about</a></li>
+        <li><a href="{% url 'pricing' %}">Pricing</a></li>
+        <li><a href="{% url 'about_us' %}">About Us</a></li>
         <li><a href="{% url 'contact_us' %}">contact us</a></li>
       </ul>
     </nav>
@@ -146,7 +147,7 @@
           <ul>
             <li class="btn_hover">
               <a
-                href="https://play.google.com/store/apps/details?id=com.mibiservice.app"
+                href="{% url 'join_us' %}"
                 target="_blank"
                 >Join now</a
               >
@@ -168,7 +169,10 @@
             </li>
             <!-- <li><a href="#" class="gc_main_navigation">blog </a></li> -->
             <li>
-              <a href="{% url 'about_us' %}" class="gc_main_navigation">about</a>
+              <a href="{% url 'pricing' %}" class="gc_main_navigation">Pricing</a>
+            </li>
+            <li>
+              <a href="{% url 'about_us' %}" class="gc_main_navigation">About Us</a>
             </li>
             <li>
               <a href="{% url 'contact_us' %}" class="gc_main_navigation"
@@ -480,21 +484,21 @@
               <h5>app & integration</h5>
               <ul class="nav-widget">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="{% url 'index' %}">Home</a>
                 </li>
 
                 <li>
-                  <a href="partners.html">Our Partners</a>
+                  <a href="{% url 'partners' %}">Our Partners</a>
                 </li>
 
                 <!-- <li>
                   <a href="#">Blog</a>
                 </li> -->
                 <li>
-                  <a href="about_us.html">About</a>
+                  <a href="{% url 'about_us' %}">About</a>
                 </li>
                 <li>
-                  <a href="contact_us.html">Cotact Us</a>
+                  <a href="{% url 'contact_us' %}">Contact Us</a>
                 </li>
                 <li>
                   <a

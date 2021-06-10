@@ -64,7 +64,8 @@
         <!-- <li class="">
           <a href="#">blog</a>
         </li> -->
-        <li><a href="{% url 'about_us' %}">about</a></li>
+        <li><a href="{% url 'pricing' %}">Pricing</a></li>
+        <li><a href="{% url 'about_us' %}">About Us</a></li>
         <li><a href="{% url 'contact_us' %}">contact us</a></li>
       </ul>
     </nav>
@@ -147,7 +148,7 @@
           <ul>
             <li class="btn_hover">
               <a
-                href="{% url 'index' %}"
+                href="{% url 'join_us' %}"
                 
                 >Join now</a
               >
@@ -168,9 +169,16 @@
             <!-- <li><a href="#" class="gc_main_navigation">blog </a></li> -->
             <li>
               <a
+                href="{% url 'pricing' %}"
+                class="gc_main_navigation active_class active_class2 active_class3"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
                 href="{% url 'about_us' %}"
                 class="gc_main_navigation active_class active_class2 active_class3"
-                >about</a
+                >About Us</a
               >
             </li>
             <li>
@@ -194,8 +202,8 @@
             <div class="col-lg-3 col-md-3 col-12 col-sm-4">
               <div class="sub_title_section">
                 <ul class="sub_title">
-                  <li><a href=""> Home </a>&nbsp; / &nbsp;</li>
-                  <li>About us</li>
+                  <li><a href="{% url 'index' %}"> Home </a>&nbsp; / &nbsp;</li>
+                  <li><a href="{% url 'about_us' %}">About us</li>
                 </ul>
               </div>
             </div>
@@ -839,21 +847,21 @@
               <h5>app & integration</h5>
               <ul class="nav-widget">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="{% url 'index' %}">Home</a>
                 </li>
 
                 <li>
-                  <a href="partners.html">Our Partners</a>
+                  <a href="{% url 'partners' %}">Our Partners</a>
                 </li>
 
                 <!-- <li>
                   <a href="#">Blog</a>
                 </li> -->
                 <li>
-                  <a href="about_us.html">About</a>
+                  <a href="{% url 'about_us' %}">About</a>
                 </li>
                 <li>
-                  <a href="contact_us.html">Cotact Us</a>
+                  <a href="{% url 'contact_us' %}">Contact Us</a>
                 </li>
                 <li>
                   <a

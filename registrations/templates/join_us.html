@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8" />
+    <title>MiBi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="MobileOptimized" content="320" />
+    <!--Template style -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/flaticon.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/dropify.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery-ui.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/magnific-popup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/nice-select.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/responsive.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/custom.css' %}">
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="{% static '/img/Logo-small.png' %}" />
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
+            <div class="jb_heading_wraper">
+
+                <h3>We are Popular Everywhere
+</h3>
+
+                <p>For a recruiter or a worker</p>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="jp_register_section_main_wrapper jb_cover">
+                <div class="jp_regis_left_side_box_wrapper">
+                    <div class="jp_regis_left_side_box">
+                        <i class="flaticon-laptop"></i>
+                        <h4>I’m a recruiter</h4>
+                        <p>Post a job and hire as many workers as you want</p>
+                        <ul>
+                            <!--https://play.google.com/store/apps/details?id=com.mibiservice.app-->
+                            <li><a href="{% url 'reg_recruiter' %}"  class="price_btn regis_btn"> register as recruiter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="jp_regis_right_side_box_wrapper">
+
+                    <div class="jp_regis_right_side_box">
+                        <i class="flaticon-doctor"></i>
+                        <h4>I’m a worker</h4>
+                        <p>Get a nice-paying job quickly with proper documentation</p>
+                        <ul>
+                            <li><a href="{% url 'reg_worker' %}"  class="price_btn regis_btn">register as worker</a></li>
+                        </ul>
+                    </div>
+                    <div class="jp_regis_center_tag_wrapper">
+                        <p>OR</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top:35px;">
+            <div class="jp_register_section_main_wrapper jb_cover">
+            <!--    <div class="jp_regis_left_side_box_wrapper">-->
+                   <center> <div class="jp_regis_left_side_box" style="text-align: center;">
+                        <i class="flaticon-doctor" style="height:5px"></i>
+                        <h4 style="margin-left:10px; text-align:center;">I’m a partner</h4>
+                        <p>Support Us and be our partner</p>
+                        <ul>
+                            <!--https://play.google.com/store/apps/details?id=com.mibiservice.app-->
+                          <center>  <li><a href="{% url 'reg_partner' %}"  class="price_btn regis_btn"> register as partner</a></li></center>
+                        </ul>
+                    </div></center>
+                </div>
+    </div>
+</div>
+</div>
+
+<div class="footer index2_footer_wrapper footer_index3 shaa jb_cover">
+    <div class="ft_shape bubble-18">
+        <img src="{% static '/images/bubble2.png' %}" class="img-responsive " alt="img">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="footerNav jb_cover">
+                    <!-- <a href="#"><img src="images/logo5.png" alt="img"></a> -->
+                    <a href="https://mibiservice.com/"><img src="{% static '/img/Logo.png' %}" alt="img" style="height:80px; filter:hue-rotate(0)"></a>
+                    <ul class="footer_first_contact">
+                        <li><i class="flaticon-location-pointer"></i>
+                            <p>1. Incubation Center IIT Indore, Simrol, Indore, Madhya Pradesh 452020.
+                                <br>2. Ward no. 3, Via-khuri, Sikar, Rajasthan 332315
+                            </p>
+                        </li>
+                        <li><i class="flaticon-telephone"></i>
+                            <p>+916265700389
+                                <!-- <br> 1 -234 -456 -7890 -->
+                              </p>
+                        </li>
+                        <li><i class="flaticon-envelope"></i><a href="#">support@mibiservice.com </a>
+                            <!-- <br> -->
+                            <!-- <a href="#">support@mibiservice.com</a> -->
+                        </li>
+
+                    </ul>
+
+                    <ul class="icon_list_news index2_icon_list jb_cover">
+                        <li>
+                          <a href="https://www.facebook.com/mibi.india"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/mibi_india"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/company/mibi-services-pvt-ltd/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/mibi_india/"><i class="fab fa-instagram"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="footerNav jb_cover footer_border_displ">
+                    <h5>app & integration</h5>
+                    <ul class="nav-widget">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="partners.html">Our Partners</a>
+                        </li>
+
+                        <!-- <li>
+                            <a href="#">Blog</a>
+                        </li> -->
+                        <li>
+                            <a href="about_us.html">About</a>
+                        </li>
+                        <li>
+                            <a href="contact_us.html">Cotact Us</a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=com.mibiservice.app" target="_blank">Download App</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-12 mt-sm-5">
+                <div class="footerNav jb_cover footer_border_displ">
+                    <h5>About MiBi</h5>
+
+                    <p class="footer__text">
+                        We serve the unorganized sector workforce by upskilling, hiring, and personalized financial literacy and management solutions like saving, investing, etc., through a seamless AI-powered platform.
+                    </p>
+                </div>
+            </div>
+            <div class="copyright_left"><i class="fa fa-copyright"></i> 2021 MiBi Sevices | All Rights Reserved.
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop gradient-color">
+            <div class="wave waveTop wavetop_1 wavetop_3"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom wavebottom_1 wavebottom_3"></div>
+        </div>
+    </div>
+    <div class="ft_shape2 bubble-190">
+        <img src="{% static '/images/bubble2.png' %}" class="img-responsive " alt="img">
+    </div>
+    <div class="ft_shape1 bubble-19">
+        <img src="{% static '/images/bubble2.png' %}" class="img-responsive " alt="img">
+    </div>
+</div>
+
+<!-- footer Wrapper End -->
+<!-- chat box Wrapper start -->
+<!-- <div id="chat-circle" class="btn btn-raised circle_index3">
+<i class="fas fa-comment-alt"></i>
+</div>
+<div class="chat-box chat_box_3">
+<div class="chat-box-header">
+  ChatBot
+  <span class="chat-box-toggle"><i class="fas fa-times"></i></span>
+</div>
+<div class="chat-box-body chat_msg_box22">
+  <div class="chat-box-overlay">
+  </div>
+  <div class="chat-logs">
+
+  </div>
+</div>
+<div class="chat-input">
+  <form>
+    <input type="text" id="chat-input" placeholder="Send a message..."/>
+  <button type="submit" class="chat-submit" id="chat-submit"><i class="fas fa-paper-plane"></i></button>
+  </form>
+</div>
+</div> -->
+<!-- chat box Wrapper end -->
+<!--custom js files-->
+<script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/modernizr.js' %}"></script>
+<script src="{% static '/js/jquery.menu-aim.js' %}"></script>
+<script src="{% static '/js/plugin.js' %}"></script>
+<script src="{% static '/js/owl.carousel.js' %}"></script>
+<script src="{% static '/js/jquery-ui.js' %}"></script>
+<script src="{% static '/js/jquery.countTo.js' %}"></script>
+<script src="{% static '/js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static '/js/dropify.min.js' %}"></script>
+<script src="{% static '/js/jquery.inview.min.js' %}"></script>
+<script src="{% static '/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static '/js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static '/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static '/js/custom.js' %}"></script>
+<!-- custom js-->
+</body>
+
+
+</html>

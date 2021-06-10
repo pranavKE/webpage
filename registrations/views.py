@@ -21,6 +21,9 @@ def partners(request):
 def index(request):
     return render(request, 'index.html')
 
+def join_us(request):
+    return render(request, 'join_us.html')
+
 def register_recruiter(request):
     form = RecruiterForm()
     context = {'form':form}
@@ -34,8 +37,10 @@ def register_recruiter(request):
                 form = RecruiterForm(request.POST)
                 if form.is_valid():
                     user = form.save()
-                    messages.success(request, f'Your account has been created! You are now able to log in')
-                    return redirect('index')
+                    username = form.cleaned_data.get('name')
+                    context = {'form':form, 'name': username}
+                    messages.success(request, 'Account was created for ' + username)
+                    return redirect('reg_recruiter')
             else:
                 messages.success(request, f'Email already exists')
         else:
@@ -67,9 +72,11 @@ def register_partner(request):
                 Do_you_have = request.POST.get('Do_you_have')
                 print(name,gender,phone_number,email,adress_line1,state,city,Do_you_have)
                 user=Partner.objects.create(name=name ,gender=gender,phone_number=phone_number,email=email,adress_line1=adress_line1,state=state,city=city,Do_you_have=Do_you_have)
-                user.save()     
-                messages.success(request, f'Your account has been created! You are now able to log in')
-                return redirect('index')
+                user.save()  
+                username = form.cleaned_data.get('name')
+                context = {'form':form, 'name': username}   
+                messages.success(request, 'Account was created for ' + username)
+                return redirect('reg_partner')
             else:
                 messages.success(request, f'invalid credentials')  
         else:          
@@ -79,13 +86,9 @@ def register_partner(request):
 
 def register_worker(request):
     if request.method == 'POST':
-
-
         form = WorkerForm(request.POST)
-
-        
-        
-
+        username = request.POST.get('Name')
+        context = {'form':form, 'name': username}
         Name = request.POST.get('Name')
         Phone_Number = request.POST.get('Phone_Number')
         if(len(Phone_Number)>10):
@@ -135,10 +138,13 @@ def register_worker(request):
                 print('Preferred_Work_Location_list=',Preferred_Work_Location_list)
                 NewWorker = Worker_model.objects.create(Name = Name, Phone_Number = Phone_Number, Email = Email, Address_line1 = Address_line1, State = State, City = City,Categories=cat_list, Education_Level = edu_level, Minimum_Expected_Salary = Minimum_Expected_Salary, Date_of_Birth = Date_of_Birth,Preferred_Work_Location=work_loc, Previous_Work_Experience = Previous_Work_Experience)
                 NewWorker.save()
-                return redirect('index')
+                messages.success(request, 'Account was created for ' + username)
+                return redirect('reg_worker')
             else:
                 messages.success(request, f'Please accept the terms and conditions')
 
     else:
         form = WorkerForm()
-    return render(request, 'worker1.html')
+        username = request.POST.get('Name')
+        context = {'form':form, 'name': username}
+    return render(request, 'worker1.html', context)

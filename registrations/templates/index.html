@@ -54,8 +54,8 @@
                 <a href="#">blog</a>
             </li> -->
             <li><a href="{% url 'pricing' %}">Pricing</a></li>
-            <li><a href="{% url 'about_us' %}">about</a></li>
-            <li><a href="{% url 'contact_us' %}">contact us</a></li>
+            <li><a href="{% url 'about_us' %}">About Us</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
         </ul>
     </nav>
     <div class="cp_navi_main_wrapper index_2_top_header index_3_top_header jb_cover">
@@ -101,7 +101,7 @@
             <div class="posting_job">
                 <ul>
                     <li class="btn_hover">
-                         <a href="#forms_parts" >Join now</a>
+                         <a href="{% url 'join_us' %}" >Join now</a>
                     </li>
                 </ul>
             </div>
@@ -115,7 +115,7 @@
                               <!-- <li><a href="#" class="gc_main_navigation">blog </a>
                     </li> -->
                     <li><a href="{% url 'pricing' %}">Pricing</a></li>
-                              <li><a href="{% url 'about_us' %}" class="gc_main_navigation">about</a>
+                              <li><a href="{% url 'about_us' %}" class="gc_main_navigation">About Us</a>
                     </li>
                    <li><a href="{% url 'contact_us' %}" class="gc_main_navigation">contact us</a></li>
 
@@ -769,31 +769,35 @@
 
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="footerNav jb_cover footer_border_displ">
-                        <h5>app & integration</h5>
-                        <ul class="nav-widget">
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-
-                            <li>
-                                <a href="partners.html">Our Partners</a>
-                            </li>
-
-                            <!-- <li>
-                                <a href="#">Blog</a>
-                            </li> -->
-                            <li>
-                                <a href="about_us.html">About</a>
-                            </li>
-                            <li>
-                                <a href="contact_us.html">Cotact Us</a>
-                            </li>
-                            <li>
-                                <a href="https://play.google.com/store/apps/details?id=com.mibiservice.app" target="_blank">Download App</a>
-                            </li>
-                        </ul>
+                      <h5>app & integration</h5>
+                      <ul class="nav-widget">
+                        <li>
+                          <a href="{% url 'index' %}">Home</a>
+                        </li>
+        
+                        <li>
+                          <a href="{% url 'partners' %}">Our Partners</a>
+                        </li>
+        
+                        <!-- <li>
+                          <a href="#">Blog</a>
+                        </li> -->
+                        <li>
+                          <a href="{% url 'about_us' %}">About</a>
+                        </li>
+                        <li>
+                          <a href="{% url 'contact_us' %}">Contact Us</a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://play.google.com/store/apps/details?id=com.mibiservice.app"
+                            target="_blank"
+                            >Download App</a
+                          >
+                        </li>
+                      </ul>
                     </div>
-                </div>
+                  </div>
                 <div class="col-lg-6 col-sm-12 col-12 mt-sm-5">
                     <div class="footerNav jb_cover footer_border_displ">
                         <h5>About MiBi</h5>

@@ -62,7 +62,8 @@
         <!-- <li class="">
           <a href="#">blog</a>
         </li> -->
-        <li><a href="{% url 'about_us' %}">about</a></li>
+        <li><a href="{% url 'pricing' %}">Pricing</a></li>
+        <li><a href="{% url 'about_us' %}">About Us</a></li>
         <li><a href="{% url 'contact_us' %}">contact us</a></li>
       </ul>
     </nav>
@@ -145,7 +146,7 @@
           <ul>
             <li class="btn_hover">
               <a
-                href=""
+                href="{% url 'join_us' %}"
                 >Join now</a
               >
             </li>
@@ -164,7 +165,10 @@
             </li>
             <!-- <li><a href="#" class="gc_main_navigation">blog </a></li> -->
             <li>
-              <a href="{% url 'about_us' %}" class="gc_main_navigation">about</a>
+              <a href="{% url 'pricing' %}" class="gc_main_navigation">Pricing</a>
+            </li>
+            <li>
+              <a href="{% url 'about_us' %}" class="gc_main_navigation">About Us</a>
             </li>
             <li>
               <a
