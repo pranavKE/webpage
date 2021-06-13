@@ -189,17 +189,26 @@
       <div class="container">
         <div class="row">
           <!-- section_heading start -->
-          <div class="col-lg-9 col-md-9 col-12 col-sm-8">
-            <h1>Pricing</h1>
-          </div>
-          <div class="col-lg-3 col-md-3 col-12 col-sm-4">
-            <div class="sub_title_section">
-              <ul class="sub_title">
-                <li><a href="{% url 'index' %}"> Home </a>&nbsp; / &nbsp;</li>
-                <li>Pricing</li>
-              </ul>
-            </div>
-          </div>
+          <form class="text-centre border-light p-5" action="success" method="POST">
+              {% csrf_token %}
+            <script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                data-key="rzp_live_qn1mOPoha8nwg6" 
+                data-amount="1200" 
+                data-currency="INR"
+                data-order_id="{{payment.id}}"
+                data-buttontext="Pay and confirm your registration"
+                data-name="MiBi Services Private Lvt "
+                data-description="Pay rupess 12 towards MiBi"
+                data-image="{% static '/img/Logo-small.png' %}"
+                data-prefill.name="MiBi"
+                data-prefill.email="xyz@gmail.com"
+                data-theme.color="#ffb43c"
+            ></script>
+            <input type="hidden" custom="Hidden Element" name="hidden">
+            </form>
+            
+          
         </div>
       </div>
     </div>
@@ -207,63 +216,7 @@
   <main>
     <div class="container">
 
-      <h1 class="text-center pricing-table-title">Pricing Table</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card pricing-card pricing-plan-basic">
-            <div class="card-body">
-
-              <span class="iconify pricing-plan-icon" data-icon="carbon:partnership" data-inline="false"></span>
-              <p class="pricing-plan-title">Partners</p>
-              <h3 class="pricing-plan-cost ml-auto">FREE</h3>
-              <ul class="pricing-plan-features">
-                <li>(for Partners)</li>
-                <li>Get associated</li>
-                <li>Earn up to 10k-20k commission</li>
-
-
-              </ul>
-              <a href="#!" class="btn pricing-plan-purchase-btn">Free</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
-            <div class="card-body">
-
-
-            <span class="iconify pricing-plan-icon" data-icon="mdi-account-hard-hat" data-inline="false"></span>
-
-              <p class="pricing-plan-title">Workers</p>
-              <h3 class="pricing-plan-cost ml-auto"> ₹ 12</h3>
-              <ul class="pricing-plan-features">
-                <li>Get listed for a year</li>
-                <li>Avail Basic/introductory courses for 1 year</li>
-                <li>Financial services</li>
-
-              </ul>
-              <a href="{% url 'price_worker' %}" class="btn pricing-plan-purchase-btn">Purchase</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card pricing-card pricing-plan-enterprise">
-            <div class="card-body">
-
-              <span class="iconify pricing-plan-icon" data-icon="clarity:employee-solid" data-inline="false"></span>
-              <p class="pricing-plan-title">Recruiters</p>
-              <h3 class="pricing-plan-S ml-auto">5% of workers salary</h3>
-              <ul class="pricing-plan-features">
-                <li>5% of the worker's Salary</li>
-                <li>On demand skilled workers</li>
-                <li>Management Services</li>
-
-              </ul>
-              <a href="#!" class="btn pricing-plan-purchase-btn">Purchase</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

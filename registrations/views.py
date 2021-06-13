@@ -1,13 +1,26 @@
-
 from django.shortcuts import render, redirect 
 from django.http import HttpResponse
 from .forms import *
 from .models import *
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def pricing(request):
     return render(request, 'price.html')
+
+@csrf_exempt
+def success(request):
+    return render(request, 'success.html')
+
+def price_worker(request):
+    if request.method == 'POST':
+        amount = 1200
+        order_currency = 'INR' 
+        client=razorpay.Client(
+            auth=('rzp_live_qn1mOPoha8nwg6','ePVRjPHnMNSsrEM8vk14AGVg'))
+        payment=client.order.create({'amount':amount,'currency':'INR','payment_capture':'1'})
+    return render(request, 'price_worker.html')
 
 def about_us(request):
     return render(request, 'about_us.html')
@@ -139,7 +152,7 @@ def register_worker(request):
                 NewWorker = Worker_model.objects.create(Name = Name, Phone_Number = Phone_Number, Email = Email, Address_line1 = Address_line1, State = State, City = City,Categories=cat_list, Education_Level = edu_level, Minimum_Expected_Salary = Minimum_Expected_Salary, Date_of_Birth = Date_of_Birth,Preferred_Work_Location=work_loc, Previous_Work_Experience = Previous_Work_Experience)
                 NewWorker.save()
                 messages.success(request, 'Account was created for ' + username)
-                return redirect('reg_worker')
+                return redirect('price_worker')
             else:
                 messages.success(request, f'Please accept the terms and conditions')
 
